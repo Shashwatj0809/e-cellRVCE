@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/766bf52a43.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="home_images/favicon7.png">
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pacifico&family=Quicksand:wght@500&family=Source+Serif+Pro&family=Zilla+Slab:wght@500&display=swap');
+
+        .demo {
+            background: #1d2124;
+        }
+
+        .main-timeline {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-timeline .timeline {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .main-timeline .timeline:before,
+        .main-timeline .timeline:after {
+            content: "";
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+
+        .main-timeline .timeline:before {
+            content: "";
+            width: 15px;
+            height: 100%;
+            background: #f4a24c;
+            margin: 0 auto;
+            position: absolute;
+            top: -50%;
+            left: 0;
+            right: 0;
+        }
+
+        .main-timeline .timeline:first-child:before {
+            height: 50%;
+            border-radius: 10px 10px 0 0;
+            top: 0;
+        }
+
+        .main-timeline .timeline:last-child:before {
+            height: 150%;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .main-timeline .timeline-icon {
+            display: block;
+            width: 130px;
+            height: 130px;
+            line-height: 105px;
+            border-radius: 50%;
+            background: #1d2124;
+            border: 12px solid #f4a24c;
+            margin: auto;
+            font-size: 70px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .main-timeline .timeline-icon:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-right: 15px solid #f4a24c;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin: auto 0;
+            position: absolute;
+            top: 0;
+            left: -33px;
+            bottom: 0;
+        }
+
+        .main-timeline .timeline-content {
+            width: 50%;
+            padding-right: 100px;
+        }
+
+        .main-timeline .icon {
+            float: left;
+            margin-right: 15px;
+            font-size: 70px;
+            color: #f4a24c;
+        }
+
+        .main-timeline .description {
+            font-size: 16px;
+            color: #fff;
+            line-height: 24px;
+            /* margin: 0; */
+            margin: 25px 8px;
+            transition: 0.2s;
+            /* box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.22),
+                -5px -5px 30px 15px rgba(0, 0, 0, 0.22); */
+
+            /* box-shadow: 5px 6px 18px 18px rgba(0, 0, 0, 0.22), 5px 6px 18px 18px rgba(0, 0, 0, 0.22); */
+
+            /* border: 3px solid ; */
+            /* border-image: linear-gradient(to right , green, lightgreen);
+                border-image-slice: 1; */
+            padding: 4px 10px;
+
+        }
+
+        .main-timeline .description {
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #fff;
+            line-height: 24px;
+            /* margin: 0; */
+            margin: 25px 8px;
+            transition: 0.2s;
+            /* box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.22), -5px -5px 30px 15px rgba(0, 0, 0, 0.22); */
+            /* box-shadow: 5px 6px 18px 18px rgba(0, 0, 0, 0.22), 5px 6px 18px 18px rgba(0, 0, 0, 0.22); */
+            /* border: 3px solid; */
+            padding: 4px 10px;
+            background-color: #fff;
+            color: black;
+            /* margin-top: 0; */
+            /* padding: 0; */
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: -1px;
+        }
+
+        .main-timeline .description:hover {
+            /* transform: scale(1.03, 1.03); */
+            /* box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.22),
+                -5px -5px 30px 15px rgba(0, 0, 0, 0.22); */
+            cursor: pointer;
+
+        }
+
+        .main-timeline .year {
+            width: 50%;
+            padding-left: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        .main-timeline .year span {
+            display: inline-block;
+            padding: 12px 25px 12px 25px;
+            background: #f4a24c;
+            border-radius: 0 50px 50px 0;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 36px;
+            color: #fff;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .timeline-icon:before {
+            border-right: none;
+            border-left: 15px solid #f26f77;
+            left: auto;
+            right: -33px;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .timeline-content {
+            float: right;
+            padding: 0 0 0 100px;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .description {
+            padding-left: 20px;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .year {
+            padding: 0 50px 0 0;
+            text-align: right;
+            right: auto;
+            left: 0;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .year span {
+            border-radius: 50px 0 0 50px;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .timeline-icon {
+            border-color: #f26f77;
+        }
+
+        .main-timeline .timeline:nth-child(2n) .icon {
+            color: #f26f77;
+        }
+
+        .main-timeline .timeline:nth-child(2n):before,
+        .main-timeline .timeline:nth-child(2n) .year span {
+            background: #f26f77;
+        }
+
+        .main-timeline .timeline:nth-child(3n) .timeline-icon {
+            border-color: #13a3b5;
+        }
+
+        .main-timeline .timeline:nth-child(3n) .timeline-icon:before {
+            border-right-color: #13a3b5;
+        }
+
+        .main-timeline .timeline:nth-child(3n) .icon {
+            color: #13a3b5;
+        }
+
+        .main-timeline .timeline:nth-child(3n):before,
+        .main-timeline .timeline:nth-child(3n) .year span {
+            background: #13a3b5;
+        }
+
+        .main-timeline .timeline:nth-child(4n) .timeline-icon {
+            border-color: #a6d050;
+        }
+
+        .main-timeline .timeline:nth-child(4n) .timeline-icon:before {
+            border-left-color: #a6d050;
+        }
+
+        .main-timeline .timeline:nth-child(4n) .icon {
+            color: #a6d050;
+        }
+
+        .main-timeline .timeline:nth-child(4n):before,
+        .main-timeline .timeline:nth-child(4n) .year span {
+            background: #a6d050;
+        }
+
+        .main-timeline .timeline:nth-child(5n) .timeline-icon {
+            border-color: #f4a24c;
+        }
+
+        /* .main-timeline .timeline:nth-child(5n) .timeline-icon:before {
+            border-right-color: #f4a24c;
+        } */
+
+        .main-timeline .timeline:nth-child(5n) .icon {
+            color: #f4a24c;
+        }
+
+        .main-timeline .timeline:nth-child(5n):before,
+        .main-timeline .timeline:nth-child(5n) .year span {
+            background: #f4a24c;
+        }
+
+        .small_image_container {
+            display: none;
+        }
+
+        .r_heading {
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+            font-size: 64px;
+            /* background: linear-gradient(to right, #f4a24c 50%,  #f26f77 30%,  #149cad 60%, #a6d050 50%); */
+            background: linear-gradient(to right, #f4a24c 23%, #f26f77 30%, #149cad 60%, #a6d050 44%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite;
+            margin-bottom: 30px;
+
+        }
+
+        .xuberance {
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .container2 {
+            display: none;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) and (min-width: 1000px) {
+            .reveal {
+                /* height: 168px;
+                width: 265px; */
+                height: 270px;
+                width: 470px;
+                padding-right: 94px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .r_heading {
+                font-size: 47px;
+            }
+
+            .elogo {
+                display: none;
+            }
+
+            .reveal {
+                height: 210px;
+                width: 98vw;
+            }
+
+
+            .small_image_container {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 9px;
+                margin-right: 9px;
+                margin-top: 3px;
+                margin-bottom: 6px;
+            }
+
+            .elogo2 {
+                height: 57px;
+                width: 46px;
+                margin-top: -94px;
+                margin-left: 5px;
+            }
+
+            .xuberance {
+                height: 56px;
+                width: 48px;
+                padding-top: 12px;
+            }
+
+            .filter {
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+                height: 60px;
+                width: 163px;
+            }
+
+            .main-timeline .timeline {
+                padding-top: 95px;
+                margin-top: 150px;
+                margin-bottom: 50px;
+            }
+
+            .main-timeline .timeline:first-child {
+                margin-top: 135px;
+            }
+
+            .main-timeline .timeline:last-child {
+                margin-bottom: 0;
+            }
+
+            .main-timeline .timeline:before,
+            .main-timeline .timeline:first-child:before,
+            .main-timeline .timeline:last-child:before {
+                width: 100%;
+                height: 15px;
+                border-radius: 10px;
+                margin: 0;
+                top: 0;
+            }
+
+            .main-timeline .timeline-icon {
+                margin: 0 auto;
+                top: -65px;
+                margin: 8px auto;
+            }
+
+            .main-timeline .timeline-icon:before,
+            .main-timeline .timeline:nth-child(2n) .timeline-icon:before,
+            .main-timeline .timeline:nth-child(3n) .timeline-icon:before {
+                border: 10px solid transparent;
+                border-top: 15px solid #f4a24c;
+                margin: 0 auto;
+                position: absolute;
+                top: auto;
+                left: 0;
+                bottom: -43px;
+                right: 0;
+            }
+
+            .main-timeline .timeline:nth-child(2n) .timeline-icon:before {
+                border-top-color: #f26f77;
+            }
+
+            .main-timeline .timeline:nth-child(3n) .timeline-icon:before {
+                border-top-color: #149cad;
+            }
+
+            .main-timeline .timeline:nth-child(4n) .timeline-icon:before {
+                border-top-color: #a6d050;
+            }
+
+            .main-timeline .timeline:nth-child(5n) .timeline-icon:before {
+                border-top-color: #f4a24c;
+            }
+
+
+
+            .main-timeline .timeline-content,
+            .main-timeline .timeline:nth-child(2n) .timeline-content {
+                width: 100%;
+                padding: 0;
+                float: none;
+            }
+
+            .main-timeline .timeline:nth-child(2n) .description {
+                padding: 0;
+            }
+
+            .main-timeline .year,
+            .main-timeline .timeline:nth-child(2n) .year {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                position: absolute;
+                top: -135px;
+                right: 0;
+                transform: translateY(0);
+            }
+
+            .main-timeline .year span,
+            .main-timeline .timeline:nth-child(2n) .year span {
+                border-radius: 50px;
+                margin: 6px;
+
+            }
+
+            /* .main-timeline .year span,
+            .main-timeline .timeline:nth-child(5n) .year span {
+                border-radius: 50px;
+
+            } */
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1000px) {
+            .reveal {
+                height: 357px;
+                width: 364px;
+                padding-right: 98px;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+            .reveal {
+                height: 270px;
+                width: 470px;
+                /* padding-right: 98px; */
+            }
+        }
+
+        .filter {
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+            /* height: 120px;
+            width: 326px; */
+            /* height: 56px;
+            width: 164px; */
+            height: 60px;
+            width: 166px;
+            margin-left: 10px;
+            margin-right: 18px;
+            margin-top: 3px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            /* display: inline-block; */
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            /* border-radius: 4px; */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: #fff;
+            margin-top: -26px;
+            margin-left: 5px;
+            margin-right: -1px;
+            border-radius: 0;
+        }
+
+        /* .experiment { */
+        /* box-shadow: 5px 6px 18px 18px rgba(0, 0, 0, 0.22), 5px 6px 18px 18px rgba(0, 0, 0, 0.22); */
+        /* box-shadow: -7px 0px 20px 13px rgba(0, 0, 0, 0.22), -4px -1px 20px 9px rgba(0, 0, 0, 0.22); */
+        /* box-shadow: -4px -1px 20px 9px rgba(0, 0, 0, 0.22); */
+        /* box-shadow: 0 -1px 10px rgba(0, 0, 0, .7); */
+
+        /* } */
+
+
+        .experiment:hover {
+            transform: scale(1.03, 1.03);
+        }
+
+        time.icon {
+            font-size: 15px;
+            display: block;
+            position: relative;
+            /* width: 1.5em; */
+            width: 108px;
+            /* height: 1.5em; */
+            height: 107px;
+            background-color: #fff;
+            border-radius: 0.9em;
+            /* box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd; */
+            box-shadow: 0 1px 0 #bdbdbd;
+            overflow: hidden;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        time.icon * {
+            display: block;
+            width: 100%;
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+        }
+
+
+        /* time.icon strong {
+            position: absolute;
+            top: 0;
+            padding: 0.4em 0;
+            color: #fff;
+            background-color: #fd9f1b;
+            border-bottom: 1px dashed #f37302;
+            box-shadow: 0 2px 0 #fd9f1b;
+        } */
+
+        time.icon strong {
+            position: absolute;
+            top: -34px;
+            padding: 0.5em 1em;
+            color: hsl(42deg 22% 97%);
+            height: 72px;
+            background-color: #f4a24c;
+            /* border-bottom: 1px dashed #f37302; */
+            /* box-shadow: 0 2px 0 #fd9f1b; */
+            /* background: yellow 10px; */
+            /* background: burlywood center center/cover no-repeat; */
+        }
+
+
+
+        time.icon em {
+            position: absolute;
+            bottom: 0.3em;
+            /* color: #fd9f1b; */
+        }
+
+        time.icon em {
+            position: absolute;
+            bottom: -2.1em;
+            /* color: #fd9f1b; */
+            /* color: #f4a24c */
+        }
+
+        time.icon span {
+            font-size: 26px;
+            letter-spacing: -0.05em;
+            /* padding-top: 0.8em; */
+            padding-top: 6px;
+            color: #181414;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            border: 3px solid;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            font-size: 22px;
+            padding: 2px 5px;
+            /* color: #fcfdfd; */
+        }
+
+        /* .btn-link:hover {
+            box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+        } */
+
+        .btn-link:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(120deg,
+                    transparent,
+                    rgba(146, 148, 248, 0.4),
+                    transparent); */
+            background: linear-gradient(120deg, transparent, rgba(255, 233, 163, 0.4), transparent);
+            transition: all 650ms;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .btn-link:hover {
+            text-decoration: none;
+        }
+
+        .btn-link:hover:before {
+            text-decoration: none;
+            list-style: none;
+            left: 100%;
+            list-style: none;
+        }
+        @media only screen and (min-width: 1025px){
+            .fmworkshop{
+                margin-left: 30%;
+            }
+        }    
+
+        /* @media only screen and (max-width: 768px) {
+            .reveal {
+                height: 210px;
+                width: 98vw;
+            }
+        } */
+
+        /* .reveal{
+            height: 270px;
+            width: 470px;
+        } */
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="demo">
+        <nav>
+            <div class="image-container">
+                <div>
+                    <img src="EcellLogoBlack.png" alt="" class="filter elogo">
+                </div>
+
+                <div class="xuberance">
+                    <img height="40px" width="43px" src="xuberance.png" alt="">
+                </div>
+
+            </div>
+
+        </nav>
+        <nav>
+            <div class="small_image_container">
+                <div>
+                    <img src="ecelllogowhite.png" alt="" class="elogo2">
+                </div>
+
+            </div>
+        </nav>
+        <header>
+            <h1 class="r_heading">Exuberance Registration</h1>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline">
+                            <span class="timeline-icon">
+                                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoEPvvuhwVmeQk5SflMhusiojB5ud58g59Lw&usqp=CAU"
+                                    alt=""
+                                    style="height: 100px; width: 100px; border-radius: 100%; margin-top: -0.8rem;  display: none;"> -->
+                                <time datetime="2020-10-20" class="icon">
+                                    <em>Saturday</em>
+                                    <strong>November</strong>
+                                    <span>7</span>
+                                </time>
+                            </span>
+                            <div class="timeline-content">
+                                <div class="experiment" data-aos="flip-up">
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    margin-bottom: -15px;
+                                    margin-left: 5px;
+                                    background-color: #f4a24c;
+                                    margin-right: -1px;">
+                                        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoEPvvuhwVmeQk5SflMhusiojB5ud58g59Lw&usqp=CAU"
+                                            alt=""
+                                            style="height: 100px; width: 100px; border-radius: 100%; margin-top: 0.55em; display: block; margin-left: 0.4em; margin-bottom: 0.4em;"> -->
+                                        <h3
+                                            style="color: #fff; margin-left: 15px; margin-bottom: 4%; text-align: center; font-family: 'Quicksand', sans-serif; font-weight: bold;">
+                                            Innovate under 50 Hours</h3>
+                                        </h3>
+                                    </div>
+
+                                    <p class="description">
+                                        Innovation under 50 hours" Hackathon in collaboration with Young Indians, an
+                                        integral part of CII (Confederation of Indian Industry), is a 50-hour hackathon
+                                        where you directly work with top companies for 50 hours and solve a complex
+                                        industry problem faced by them.
+                                        Register and get a chance to grab future incubation and work opportunities in
+                                        these esteemed companies.
+                                    <div class="btn">
+                                        <a href="http://bit.ly/Ecell-Hackathon" target="_blank" class="btn-link"
+                                            style="background-color: #f4a24c; color: #fff; border: 3px; margin-bottom: 3%; padding: 3%;font-family: 'Zilla Slab', serif;">Register
+                                            Here</a>
+                                    </div>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <div class="year"><span>Event 1</span>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon">
+
+                                <time datetime="2020-10-20" class="icon">
+                                    <em>Monday</em>
+                                    <strong style="background-color: #f26f77;">November</strong>
+
+                                    <span>9</span>
+                                </time>
+                            </span>
+                            <div class="timeline-content">
+                                <div class="experiment" data-aos="zoom-in" >
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    margin-bottom: -15px;
+                                    margin-left: 5px;
+                                    background-color: #f26f77;
+                                    margin-right: -1px;">
+                                        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoEPvvuhwVmeQk5SflMhusiojB5ud58g59Lw&usqp=CAU"
+                                            alt=""
+                                            style="height: 100px; width: 100px; border-radius: 100%; margin-top: 0.55em; display: block; margin-left: 0.4em; margin-bottom: 0.4em;"> -->
+                                        <h3
+                                            style="color: #fff; margin-left: 15px; margin-bottom: 4%; text-align: center; font-family: 'Quicksand', sans-serif; font-weight: bold;">
+                                            ENTREPRENEURIAL ENTROPY</h3>
+                                        </h3>
+                                    </div>
+
+                                    <p class="description">
+                                        Conquering a difficulty always gives one a secret joy. 
+                                        Entrepreneurial Entropy is all about testing your knowledge of brands, businesses and everything that concerns them along with pushing the boundary on your crisis management.This 90 minute event with a team limit of 2-3 members, provides an opportunity to experience life,  figuring it out, finding your stand and making a mark.
+                                    <div class="btn">
+                                        <a href="https://forms.gle/EWUCPF5ZXLuzYcdj8" target="_blank" class="btn-link"
+                                            style="background-color: #f26f77; color: #fff; border: 3px; margin-bottom: 3%; padding: 3%;font-family: 'Zilla Slab', serif;">Register
+                                            Here</a>
+                                    </div>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="year"><span>Event 2</span></div>
+                        </div>
+                        <!-- <div class="timeline">
+                            <span class="timeline-icon">
+                                <time datetime="2020-10-20" class="icon">
+                                    <em>Revealed</em>
+                                    <strong style="background-color: #149cad;">To</strong>
+                                    <span>Be</span>
+                                </time>
+                            </span>
+                            <div class="timeline-content">
+                                <div class="experiment" data-aos="fade-right">
+
+                                    <img id="blue" class="reveal" width="470px" height="270px"
+                                        src="../Question_dialog_box/images/blue (2).png" alt="">
+                                </div>
+                            </div>
+                            <div class="year"><span>Event 3</span>
+                            </div>
+                        </div> -->
+
+                        <div class="timeline">
+                            <span class="timeline-icon">
+
+                                <time datetime="2020-10-20" class="icon">
+                                    <em>Tuesday</em>
+                                    <strong style="background-color: #149cad;">November</strong>
+
+                                    <span>10</span>
+                                </time>
+                            </span>
+                            <div class="timeline-content">
+                                <div class="experiment" data-aos="fade-right" >
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    margin-bottom: -15px;
+                                    margin-left: 5px;
+                                    background-color: #149cad;
+                                    margin-right: -1px;">
+                                        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoEPvvuhwVmeQk5SflMhusiojB5ud58g59Lw&usqp=CAU"
+                                            alt=""
+                                            style="height: 100px; width: 100px; border-radius: 100%; margin-top: 0.55em; display: block; margin-left: 0.4em; margin-bottom: 0.4em;"> -->
+                                        <h3
+                                            style="color: #fff; margin-left: 15px; margin-bottom: 4%; text-align: center; font-family: 'Quicksand', sans-serif; font-weight: bold;">
+                                            BUSINESS SUMMIT</h3>
+                                        </h3>
+                                    </div>
+
+                                    <p class="description">
+                                        The BUSINESS SUMMIT will be a one-day event where the teams will be representing an assigned portfolio and present their ideas aligned to the agenda for the committee assigned on the basis of preference and slots available. The participants will be given the opportunity to present their ideas, discuss their views and question their fellow competitors in the competition to finally draw the most optimum conclusion.
+                                    <div class="btn">
+                                        <a href="http://bit.ly/Exuberance_BusinessSummit" target="_blank" class="btn-link"
+                                            style="background-color: #149cad; color: #fff; border: 3px; margin-bottom: 3%; padding: 3%;font-family: 'Zilla Slab', serif;">Register
+                                            Here</a>
+                                    </div>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="year"><span>Event 3</span></div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon">
+
+                                <time datetime="2020-10-20" class="icon">
+                                    <em>Monday</em>
+                                    <strong style="background-color: #a6d050;">November</strong>
+
+                                    <span>9</span>
+                                </time>
+                            </span>
+                            <div class="timeline-content">
+                                <div class="experiment" data-aos="zoom-in" >
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    margin-bottom: -15px;
+                                    margin-left: 5px;
+                                    background-color: #a6d050;
+                                    margin-right: -1px;">
+                                        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoEPvvuhwVmeQk5SflMhusiojB5ud58g59Lw&usqp=CAU"
+                                            alt=""
+                                            style="height: 100px; width: 100px; border-radius: 100%; margin-top: 0.55em; display: block; margin-left: 0.4em; margin-bottom: 0.4em;"> -->
+                                        <h3
+                                            style="color: #fff; margin-left: 15px; margin-bottom: 4%; text-align: center; font-family: 'Quicksand', sans-serif; font-weight: bold;">
+                                            FIRSTMAIN WORKSHOP</h3>
+                                        </h3>
+                                    </div>
+
+                                    <p class="description" style="padding: 18%; font-size: 1.8em;">
+                                        Entrepreneurship during <span class="fmworkshop">Covid-19.</span>
+                                    <div class="btn">
+                                        <a href="https://forms.gle/t5oagmB2SVFD8XGd8" target="_blank" class="btn-link"
+                                            style="background-color: #a6d050; color: #fff; border: 3px; margin-bottom: 3%; padding: 3%;font-family: 'Zilla Slab', serif;">Register
+                                            Here</a>
+                                    </div>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="year"><span>Event 4</span></div>
+                        </div>
+                       
+                </div>
+                <script>
+                    AOS.init({
+                        duration: 1200
+                    })
+                </script>
+</body>
+
+</html>

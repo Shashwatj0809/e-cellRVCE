@@ -1,0 +1,69 @@
+<div id="w-node-916f478e1c6e-1d67f130" class="course-meta">
+                        <div class="col-6 col-sm-12">
+                            <div>
+                                <h2 class="course-meta-title"><strong class="keyword inverse">Our Mission</strong></h2>
+                                <p class="p-body txt-dark">
+                                    Our mission of developing the change makers of the society is achieved by organizing seminars, competitions, workshops,
+                                    conferences and these will impart the relevant skills to an entrepreneur, to anyone willing to take the step.
+                                </p>
+                                <div class="w-layout-grid who-grid">
+                                    <div data-w-id="1fe350ac-3581-0428-9fef-95be19d00b2a" style="opacity: 0;" class="txt-align-center flex-bottom">
+                                        <img src="https://uploads-ssl.webflow.com/5da865df3e5488677ddc8818/5ea9fb1bd4570f9214fabecf_av-designer.png" width="70" alt="" class="mb-10" />
+                                        <div class="con-subtitle pop">Students</div>
+                                    </div>
+                                    <div id="w-node-95be19d00b2f-1d67f130" data-w-id="1fe350ac-3581-0428-9fef-95be19d00b2f" style="opacity: 0;" class="txt-align-center flex-bottom">
+                                        <img src="https://uploads-ssl.webflow.com/5da865df3e5488677ddc8818/5ea9fb1cc746e5da8f9c2766_av-developer.png" width="70" alt="" class="mb-10" />
+                                        <div class="con-subtitle pop">Mentors</div>
+                                    </div>
+                                    <div id="w-node-95be19d00b34-1d67f130" data-w-id="1fe350ac-3581-0428-9fef-95be19d00b34" style="opacity: 0;" class="txt-align-center flex-bottom">
+                                        <img src="https://uploads-ssl.webflow.com/5da865df3e5488677ddc8818/5ea9fb1cd4570f2260fabee1_av-entre.png" width="70" alt="" class="mb-10" />
+                                        <div class="con-subtitle pop">entrepreneurs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexgutter"></div>
+                        <div class="col-6 col-sm-12">
+                            <div class="what-grid">
+                                <div id="w-node-7503a5a8179e-1d67f130">
+                                  <!--  <img src="https://uploads-ssl.webflow.com/5da865df3e5488677ddc8818/5ea9f8638f3cb73ffc8e0eff_vr-goggles.svg" alt="" class="mb-25" />-->
+                                    <h2 class="course-meta-title"><strong class="keyword inverse">Our Vision</strong></h2>
+                                    <p class="p-body txt-dark">
+                                        We envision ourselves to be the cultivators of tomorrow’s leaders. Through the activities and workshops that we host, we
+                                        give it our all to help people grow as successful managers and leaders; contributing to the growing startup ecosystem of
+                                        India.
+                                    </p>
+                                </div>
+                                <!-----------------NICE LIGHTBOX start------------->
+                                <div id="w-node-677068a99bea-1d67f130" class="course-preview">
+                                    <a href="index.html#" class="w-inline-block w-lightbox">
+                                        <img
+                                            src="home_images/lens.svg"
+                                            width="279"
+                                            data-w-id="1b59e1ab-2a2c-a9cd-de21-9018f1b93c7f"
+                                            style="opacity: 0;"
+                                            alt=""
+                                            class="mb-0"
+                                        />
+                                        <script type="application/json" class="w-json">
+                                            {
+                                                "items": [
+                                                    {
+                                                        "type": "image",
+                                                        "_id": "5eac8f506c54edbe9a8e9874",
+                                                        "fileName": "preview-vr.png",
+                                                        "origFileName": "preview-vr.png",
+                                                        "width": 1200,
+                                                        "height": 1364,
+                                                        "fileSize": 1766495,
+                                                        "url": "home_images/lens.svg"
+                                                    }
+                                                ]
+                                            }
+                                        </script>
+                                    </a>
+                                </div> 
+                                <!-----------------NICE LIGHTBOX end------------->
+                            </div>
+                        </div>
+                    </div>
