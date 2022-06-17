@@ -2420,7 +2420,6 @@ a {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    b
 }
 
 .flexbox.justify-start {
@@ -2476,7 +2475,6 @@ a {
 
 }
 
-/* .hero-counter{} */
 
 .hero-counter {
     background-color: #000;
@@ -2498,6 +2496,9 @@ a {
     color: #fff;
     text-align: center;
 }
+
+
+
 
 .countdown .timer {
     width: 170px;
@@ -7569,6 +7570,36 @@ a {
     /* .hero.beta{
         /* height: 1vh; */
     /* } */ 
+
+    .course-meta-title{
+        margin-bottom: 20px;
+    }
+
+    .hero-counter {
+        padding: 20px 0px;
+    }
+
+    .countdown{
+        padding: 10px 0px;
+    }
+
+    .countdown .timer {
+        width: 87px;
+        height: 87px;
+        margin: 3px 1vw;
+        border: 3px solid rgb(0, 255, 206);
+    }
+    .countdown>.timer .timer-value{
+        height: 25px;
+        font-size: 2rem;
+        margin: 5px 0px;
+    }
+    .countdown>.timer .timer-title{
+        font-size: 1rem;
+        margin: 0px 0px;
+    }
+
+
 
     .logo-container {
         display: flex;
